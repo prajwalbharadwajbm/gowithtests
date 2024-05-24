@@ -9,6 +9,16 @@ func Sum(numbers []int) (sum int) {
 	return
 }
 
+func SumAll(numbersToSum ...[]int) []int {
+	lenOfNumbers := len(numbersToSum)
+	sum := make([]int, lenOfNumbers)
+
+	for i, numbers := range numbersToSum {
+		sum[i] = Sum(numbers)
+	}
+	return sum
+}
+
 func main() {
 	fmt.Println(Sum([]int{1, 2, 3, 4, 5}))
 }
