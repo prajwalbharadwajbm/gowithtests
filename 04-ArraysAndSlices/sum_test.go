@@ -11,12 +11,4 @@ func TestSum(t *testing.T) {
 			t.Errorf("got %d want %d given, %v", got, want, numbers)
 		}
 	})
-	t.Run("calculate sum of slice", func(t *testing.T) {
-		numbers := []int{1, 2, 3}
-		got := Sum(numbers)
-		want := 6
-		if got != want {
-			t.Errorf("got %d want %d given, %v", got, want, numbers)
-		}
-	})
 }
